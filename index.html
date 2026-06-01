@@ -164,8 +164,8 @@ if (level === 4 && !p.breakTimer) {
 
   cameraX = Math.max(0, player.x - canvas.width/2);
 
-  // cambio de nivel cada 5 puntos
-  let newLevel = Math.floor(score/5)+1;
+  // cambio de nivel cada 10 puntos
+  let newLevel = Math.floor(score/10)+1;
   if (newLevel !== level && newLevel <= 5) {
     level = newLevel;
     levelUpScreen = true;
@@ -184,7 +184,7 @@ if (player.y > canvas.height) {
 
 
   // fin del juego con créditos
-  if (score>=25) { creditsMode=true; }
+  if (score>=50) { creditsMode=true; }
   if (player.y>canvas.height) gameOver=true;
 
   generatePlatforms();
